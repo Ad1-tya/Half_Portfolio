@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useState } from 'react';
+import { useState } from 'react';
 import Loading from '@/app/loading';
 import { WorkData } from '@/data';
 
@@ -22,28 +22,28 @@ export default function Portfolio({ params }: Props) {
     setLoading(false);
   };
   return (
-    <Suspense fallback={<Loading />}>
+    <>
       {loading && <Loading />}
       <section className="h-screen w-screen overflow-hidden bg-neutral-950">
         <iframe
-          className={`h-[108vh] w-full sm:hidden ${loading ? 'hidden' : ''}`}
-          src={iframeSrcMob}
+          className="h-[108vh] w-full sm:hidden"
           onLoad={handleLoad}
+          src={iframeSrcMob}
           allowFullScreen
         ></iframe>
         <iframe
-          className={`h-[108vh] w-full sm:hidden ${loading ? 'hidden' : ''}`}
+          className="hidden h-[108vh] w-full xl:block"
           src={iframeSrc}
           onLoad={handleLoad}
           allowFullScreen
         ></iframe>
         <iframe
-          className={`hidden h-[108vh] w-full sm:block xl:hidden ${loading ? 'hidden' : ''}`}
+          className="hidden h-[108vh] w-full sm:block xl:hidden"
           src={iframeSrcMed}
           onLoad={handleLoad}
           allowFullScreen
-        />
+        ></iframe>
       </section>
-    </Suspense>
+    </>
   );
 }
