@@ -1,9 +1,10 @@
 import '@/styles/globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import React, { ReactNode, Suspense } from 'react';
 import Loading from '@/app/loading';
-import { Navbar } from '@/components/navbar';
+import { cn } from '@/lib/utils';
 
 const inter = Raleway({ subsets: ['latin'] });
 
@@ -19,11 +20,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Suspense fallback={<Loading />}>
-          <Navbar />
-          {children}
-        </Suspense>
+      <body className={cn(inter.className, 'scrollbar-hide')}>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <SpeedInsights />
       </body>
     </html>
   );
