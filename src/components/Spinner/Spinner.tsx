@@ -10,7 +10,7 @@ const spinnerStyles = cva('animate-spin', {
       xl: 'size-24',
     },
     emphasis: {
-      primary: 'text-blue-600',
+      primary: 'text-purple-500',
     },
   },
   defaultVariants: {
