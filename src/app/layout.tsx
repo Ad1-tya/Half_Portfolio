@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import React, { ReactNode, Suspense } from 'react';
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <body className={cn(inter.className, 'scrollbar-hide')}>
         <Suspense fallback={<Loading />}>{children}</Suspense>
+        <SpeedInsights />
       </body>
     </html>
   );
