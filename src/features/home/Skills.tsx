@@ -31,8 +31,10 @@ export const Skills = (): ReactElement => {
   ));
 
   return (
-    <div id="skills" className="main flex snap-start flex-col">
-      <Heading title="Skills" />
+    <div id="skills" className="main flex snap-start flex-col"> 
+      <div>
+        <Heading title="Skills" />
+      </div>
       <div className="flex flex-1 flex-wrap content-center items-start gap-6 self-stretch lg:gap-11">
         <div className="flex flex-col-reverse items-start gap-5">
           <p className="text-neutral-500">\\ FIGMA \\ PHOTOSHOP \\ ILLUSTRATOR \\</p>
