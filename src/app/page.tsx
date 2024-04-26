@@ -7,10 +7,10 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <Explore />
-      <Education />
       <Experience />
       <Achievements />
       <Skills />
+      <Education />
       <Footer />
     </div>
   );

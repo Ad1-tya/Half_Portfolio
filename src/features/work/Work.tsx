@@ -10,7 +10,10 @@ export const Work = () => {
 
   const [percentage, setPercentage] = useState(0);
 
+  
+
   const handleRoute = (workurl: string): void => {
+    console.log(workurl)
     if (workurl) router.push(`/work/${workurl}`);
   };
 
@@ -37,9 +40,12 @@ export const Work = () => {
       key={items.id}
       id="works"
       className="flex flex-col items-center gap-[1rem] transition-all duration-200 ease-in-out hover:scale-105"
-      onClick={() => handleRoute(String(items.id))}
+      onClick={() => {if(items.workurl !="Coming Soon") handleRoute(String(items.id))}}
     >
-      <div className="relative h-[320px] w-[270px] border-2 border-purple-900/30 object-center xl:h-[400px] xl:w-[352px]">
+      <div className="relative group h-[320px] w-[270px] border-2 border-purple-900/30 object-center xl:h-[400px] xl:w-[352px]">
+      <div className={`${items.workurl=="Coming Soon"? `hidden group-hover:flex items-center z-10 w-full h-full absolute bg-neutral-950/80 text-neutral-50 text-xl justify-center` : `hidden`}`}>
+          Coming Soon
+      </div>
         <Image
           src={`/images/work/${items.img}`}
           alt="Card Image"

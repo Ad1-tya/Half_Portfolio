@@ -5,7 +5,7 @@ import { EducationData } from '@/data';
 export const Education = (): ReactElement => {
   const Cards = EducationData.map((items) => (
     <div key={items.id} className="relative w-full">
-      <div className="educard z-10 flex h-max w-full flex-col items-start justify-between gap-3 self-stretch">
+      <div className="educard z-10 flex h-max w-full flex-col items-start justify-between gap-4 self-stretch">
         <div className="flex gap-3">
           <svg className="h-auto w-[40px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 68">
             <path
@@ -22,7 +22,7 @@ export const Education = (): ReactElement => {
           <p className="text-purple-500">{items.grade}</p>
         </div>
 
-        <div className="flex flex-col items-start gap-6">
+        <div className="flex flex-col items-start gap-3">
           <h4>{items.subject}</h4>
           <div className="flex flex-col">
             <p>{items.instituteName}</p>

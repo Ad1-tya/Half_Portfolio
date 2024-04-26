@@ -52,4 +52,20 @@ export const WorkData: WorkItem[] = [
     workurlmed:
       'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F757oKj2Nr3KoZLig52EKl9%2FPersonal-Portfolio%3Fpage-id%3D1549%253A4324%26type%3Ddesign%26node-id%3D1549-4325%26viewport%3D566%252C364%252C0.09%26t%3DgUjaMIVUcGuLnX4Q-1%26scaling%3Dscale-down-width%26starting-point-node-id%3D1549%253A4325%26mode%3Ddesign%26hide-ui%3D1',
   },
+  {
+    id:5,
+    title:"Nami POS",
+    img:"nami.webp",
+    workurl:"Coming Soon",
+    workurlmob:"Coming Soon",
+    workurlmed:"Coming Soon"
+  },
+  {
+    id:6,
+    title:"Mach Records",
+    img:"mach.webp",
+    workurl:"Coming Soon",
+    workurlmob:"Coming Soon",
+    workurlmed:"Coming Soon"
+  }
 ] as const;

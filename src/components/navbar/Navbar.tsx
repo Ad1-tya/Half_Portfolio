@@ -7,11 +7,11 @@ import React, { ReactElement } from 'react';
 import { cn } from '@/lib/utils';
 import LOGO from 'public/logo.svg';
 export function Navbar(): ReactElement {
-  const currentPathName = usePathname();
+  const currentPathName = usePathname(); 
 
   return (
     <nav
-      className={`main absolute inset-0 z-50 mx-auto flex h-max snap-start items-center justify-between py-2`}
+      className={`main absolute inset-0 z-50 mx-auto flex h-max snap-start items-center justify-between py-3`}
     >
       <Image src={LOGO} alt="Adi Logo" width={72} height={22} className="grayscale" />
       <div className="flex gap-4">

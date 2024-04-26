@@ -5,7 +5,7 @@ import { SITE } from '@/config';
 export const Hero = (): ReactElement => {
   const designerDescription = SITE.description.split(' / ')[0];
   return (
-    <div className="main relative z-10 flex snap-start flex-wrap justify-center pt-40 sm:flex-nowrap sm:justify-between lg:h-screen">
+    <div className="main relative z-10 flex items-center snap-start flex-wrap justify-center pt-40 sm:flex-nowrap sm:justify-between lg:h-screen">
       <div className="absolute -top-7 flex size-[22rem] flex-col items-center justify-center sm:absolute sm:right-8 sm:top-8 lg:relative lg:inset-0">
         <hr className="undEff top-[104px] w-11/12" />
         <hr className="undEff top-[194px] w-11/12" />
@@ -17,8 +17,8 @@ export const Hero = (): ReactElement => {
           {SITE.lastName}
         </h1>
       </div>
-      <div className="z-10 flex flex-col items-center sm:relative sm:-z-10 lg:z-0 ">
-        <p className="-top-4 -z-10 mx-auto hidden w-max text-2xl uppercase text-neutral-50 opacity-10 sm:absolute sm:tracking-[1.75rem] lg:block ">
+      <div className="z-10 flex flex-col items-center justify-end self-stretch sm:relative sm:-z-10 lg:z-0 ">
+        <p className="-top-4 -z-10 mx-auto hidden w-max text-2xl uppercase text-neutral-50 opacity-20 sm:absolute sm:tracking-[1.75rem] lg:block ">
           Crafting Experience
         </p>
         <div>
