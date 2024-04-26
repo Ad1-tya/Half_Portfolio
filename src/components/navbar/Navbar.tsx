@@ -11,21 +11,21 @@ export function Navbar(): ReactElement {
 
   return (
     <nav
-      className={`main absolute inset-0 z-50 mx-auto flex h-max snap-start items-center justify-between py-4`}
+      className={`main absolute inset-0 z-50 mx-auto flex h-max snap-start items-center justify-between py-2`}
     >
-      <Image src={LOGO} alt="Adi Logo" width={40} height={24} className="grayscale" />
-      <div className="flex gap-2">
+      <Image src={LOGO} alt="Adi Logo" width={72} height={22} className="grayscale" />
+      <div className="flex gap-4">
         <Link
-          className={cn('text-sm capitalize text-neutral-300 hover:blur-[1px]', {
-            'font-bold': currentPathName === '/',
+          className={cn('text-base opacity-80 leading-6 capitalize text-neutral-300 hover:blur-[1px]', {
+            'font-bold opacity-100': currentPathName === '/',
           })}
           href={'/'}
         >
           About
         </Link>
         <Link
-          className={cn('text-sm capitalize text-neutral-300 hover:blur-[1px]', {
-            'font-bold': currentPathName === '/work',
+          className={cn('text-base opacity-80 leading-6 capitalize text-neutral-300 hover:blur-[1px]', {
+            'font-bold opacity-100': currentPathName === '/work',
           })}
           href={'/work'}
         >

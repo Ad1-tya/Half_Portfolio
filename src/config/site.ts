@@ -4,9 +4,10 @@ export const SITE = {
   firstName: 'Aditya',
   lastName: 'Pandey',
   aboutMe:
-    'Besides designing, I love playing games (especially VALORANT), listening to music and just chilling with my friends.',
+    'I\'m passionate about creating visually captivating designs that prioritize user accessibility. I love immersing myself into user behaviour patterns and even their psychology. Alongside UI/UX, I enjoy taking on branding projects and creating cool graphics designs',
   email: 'mraditya2017@gmail.com',
   facebookLink: 'https://www.facebook.com/ad1.tya03/',
-  instagramLink: 'https://www.instagram.com/ad1.tya_pandey/',
+  instagramLink: 'https://www.instagram.com/half.designs/',
   linkedinLink: 'https://www.linkedin.com/in/adi03/',
+  achievementsRoles: ["Leadership.", "Branding initiatives.", "Creative Direction.", "Visual Strategies.", "Team Management."]
 } as const;

@@ -5,26 +5,26 @@ import { SkillsData } from '@/data/skills';
 
 export const Skills = (): ReactElement => {
   const desList = SkillsData.Designing.map((items) => (
-    <div key={items.id} className="skillscard relative">
+    <div key={items.id} className="skillscard group filter-none relative">
       <Image
         src={`/images/skills/${items.img}`}
         width={48}
         height={48}
         alt="logos"
         sizes="(max-width: 808px) 50vw, 100vw"
-        className="inset-0 m-auto max-h-[48px] max-w-[48px] object-contain"
+        className="inset-0 transition-all duration-300 ease-in-out sm:grayscale sm:group-hover:grayscale-0 sm:group-hover:scale-105 sm:group-hover:rotate-3 m-auto max-h-[48px] max-w-[48px] object-contain"
       />
     </div>
   ));
 
   const feList = SkillsData.Frontend.map((items) => (
-    <div key={items.id} className="skillscard relative">
+    <div key={items.id} className="skillscard filter-none group relative">
       <Image
         src={`/images/skills/${items.img}`}
         width={48}
         height={48}
         alt="logos"
-        className="inset-0 m-auto max-h-[40px] max-w-[48px] object-contain"
+        className="inset-0 transition-all duration-300 ease-in-out sm:grayscale sm:group-hover:grayscale-0 sm:group-hover:scale-105 sm:group-hover:rotate-3 m-auto max-h-[48px] max-w-[48px] object-contain"
         sizes="(max-width: 808px) 50vw, 100vw"
       />
     </div>
@@ -42,7 +42,7 @@ export const Skills = (): ReactElement => {
           <h4 className="text-neutral-500">Designing</h4>
         </div>
         <div className="flex flex-1 flex-col-reverse items-start gap-5">
-          <p className="text-neutral-500">
+          <p className="text-neutral-500 group-hover:text-purple-500">
             \\ REACT \\ CSS \\ HTML \\ NEXT \\ FRAMER MOTION \\ TAILWIND \\
           </p>
           <div className="flex flex-wrap content-start items-start justify-between gap-5 self-stretch sm:flex-nowrap sm:gap-4 lg:justify-between">

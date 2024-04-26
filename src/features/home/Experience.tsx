@@ -7,29 +7,31 @@ export const Experience = (): ReactElement => {
   const experience = ExperienceData.map((items) => (
     <div
       key={items.id}
-      className="flex w-full min-w-[200px] shrink-0 flex-col items-center justify-center gap-3 border-b-[1px] border-neutral-800 p-4 transition-all hover:bg-neutral-900/30 hover:filter-none sm:w-[40vw] sm:border-none sm:p-5  lg:w-[352px]"
+      className="gap-2 sm:gap-4 group flex w-full min-w-[200px] shrink-0 flex-col items-center justify-center p-2 sm:p-4 transition-all sm:w-[40vw]  lg:w-[352px]"
     >
       <Image
         src={`/images/exp/${items.img}`}
         width={40}
         height={40}
         alt="Experience Logos"
-        className="inset-0 m-auto max-h-[40px] max-w-[40px] object-contain"
+        className="inset-0 group-hover:wiggleAnimation m-auto max-w-5 sm:max-h-[40px] sm:max-w-[40px] object-contain"
       />
-      <div className="flex w-full flex-col items-center gap-1">
+      <div className="flex w-full flex-col items-center gap-[4px] sm:gap-1">
         <h4 className="text-purple-500">{items.title}</h4>
-        <p>{items.company}</p>
+        <div className='flex sm:gap-2 flex-col items-center'>
+          <p>{items.company}</p>
+          <p className="text-neutral-300">{items.time}</p>
+        </div>
       </div>
-      <p className="text-neutral-300">{items.time}</p>
     </div>
   ));
 
   return (
-    <div id="experience" className="main top-0 flex snap-start flex-col sm:items-center">
+    <div id="experience" className="main top-0 flex snap-start flex-col items-center">
       <div>
         <Heading title="Experience" />
       </div>
-      <div className="flex flex-wrap items-end justify-center sm:justify-center lg:gap-5">
+      <div className="flex flex-wrap gap-3 items-end justify-center sm:justify-center lg:gap-5">
         {experience}
       </div>
     </div>

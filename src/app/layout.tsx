@@ -14,7 +14,7 @@ type Props = {
 
 export const metadata: Metadata = {
   title: 'Adi',
-  description: 'UI/UX Designer / Frontend Developer',
+  description: 'UI/UX Designer',
 };
 
 export default function RootLayout({ children }: Props) {

@@ -1,5 +1,5 @@
 import { Navbar } from '@/components/navbar';
-import { Education, Experience, Explore, Footer, Hero, Skills } from '@/features/home';
+import { Achievements, Education, Experience, Explore, Footer, Hero, Skills } from '@/features/home';
 
 export default function HomePage() {
   return (
@@ -9,6 +9,7 @@ export default function HomePage() {
       <Explore />
       <Education />
       <Experience />
+      <Achievements />
       <Skills />
       <Footer />
     </div>

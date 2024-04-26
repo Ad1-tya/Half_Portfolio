@@ -33,7 +33,7 @@ export const Education = (): ReactElement => {
     </div>
   ));
   return (
-    <div id="education" className="main flex flex-col items-center sm:flex-row lg:gap-56">
+    <div id="education" className="main flex flex-col sm:items-center sm:flex-row lg:gap-56">
       <div>
         <Heading title="Education" />
       </div>
