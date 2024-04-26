@@ -35,7 +35,7 @@ export const Hero = (): ReactElement => {
       </div>
       <div className="mt-auto flex w-[22rem] flex-col items-center gap-[1rem] text-center sm:items-start sm:text-left lg:static">
         <h3>{designerDescription}</h3>
-        <p className="text-neutral-400">{SITE.aboutMe}</p>
+        <p className="text-neutral-400">{SITE.aboutMe} <br /> {SITE.aboutMe2}</p>
       </div>
     </div>
   );

@@ -13,11 +13,11 @@ export const WorkData: WorkItem[] = [
     title: 'Hostel Hives',
     img: 'hostelhives.webp',
     workurl:
-      'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F757oKj2Nr3KoZLig52EKl9%2FPersonal-Portfolio%3Fpage-id%3D1549%253A2746%26type%3Ddesign%26node-id%3D1549-3231%26viewport%3D526%252C372%252C0.09%26t%3D4kf0c8kqetOfjaNI-1%26scaling%3Dscale-down-width%26starting-point-node-id%3D1549%253A3231%26mode%3Ddesign%26hide-ui%3D1',
+      'https://www.figma.com/proto/757oKj2Nr3KoZLig52EKl9/Personal-Portfolio?page-id=1549%3A2746&type=design&node-id=1549-3231&viewport=331%2C377%2C0.1&t=LlmclHIjc2z7HAR8-8&scaling=scale-down-width&starting-point-node-id=1549%3A3231&hide-ui=1',
     workurlmob:
       'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F757oKj2Nr3KoZLig52EKl9%2FPersonal-Portfolio%3Fpage-id%3D1549%253A2746%26type%3Ddesign%26node-id%3D1549-3712%26viewport%3D526%252C372%252C0.09%26t%3D4kf0c8kqetOfjaNI-1%26scaling%3Dscale-down-width%26starting-point-node-id%3D1549%253A3712%26mode%3Ddesign%26hide-ui%3D1',
     workurlmed:
-      'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F757oKj2Nr3KoZLig52EKl9%2FPersonal-Portfolio%3Fpage-id%3D1549%253A2746%26type%3Ddesign%26node-id%3D1549-2750%26viewport%3D526%252C372%252C0.09%26t%3D4kf0c8kqetOfjaNI-1%26scaling%3Dscale-down-width%26starting-point-node-id%3D1549%253A2750%26mode%3Ddesign%26hide-ui%3D1',
+      'https://www.figma.com/proto/757oKj2Nr3KoZLig52EKl9/Personal-Portfolio?page-id=1549%3A2746&type=design&node-id=1549-2750&viewport=331%2C377%2C0.1&t=LlmclHIjc2z7HAR8-1&scaling=min-zoom&starting-point-node-id=1549%3A2750&mode=design%26hide-ui%3D1',
   },
   {
     id: 2,

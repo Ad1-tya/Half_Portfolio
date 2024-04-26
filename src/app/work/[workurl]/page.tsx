@@ -1,8 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Loading from '@/app/loading';
 import { WorkData } from '@/data';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 type Props = {
   params: {
@@ -12,11 +14,33 @@ type Props = {
 
 export default function Portfolio({ params }: Props) {
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
   const workItem = WorkData.find((item) => item.id === parseInt(params.workurl));
 
-  const iframeSrc = workItem?.workurl ? workItem.workurl : 'about:blank';
-  const iframeSrcMob = workItem?.workurlmob ? workItem.workurlmob : 'about:blank';
-  const iframeSrcMed = workItem?.workurlmed ? workItem.workurlmed : 'about:blank';
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1440) {
+        if (workItem?.workurlmed) {
+          router.push(workItem.workurlmed);
+        } else if (workItem?.workurlmob) {
+          router.push(workItem.workurlmob);
+        } else {
+          setLoading(false);
+        }
+      } else if (workItem?.workurl) {
+        router.push(workItem.workurl);
+      } else {
+        setLoading(false);
+      }
+    };
+
+    handleResize(); // Check initial screen size
+    window.addEventListener('resize', handleResize); // Listen for screen size changes
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener
+    };
+  }, [workItem]);
 
   const handleLoad = () => {
     setLoading(false);
@@ -24,26 +48,6 @@ export default function Portfolio({ params }: Props) {
   return (
     <>
       {loading && <Loading />}
-      <section className="h-screen w-screen overflow-hidden bg-neutral-950">
-        <iframe
-          className="h-[108vh] w-full sm:hidden"
-          onLoad={handleLoad}
-          src={iframeSrcMob}
-          allowFullScreen
-        ></iframe>
-        <iframe
-          className="hidden h-[108vh] w-full xl:block"
-          src={iframeSrc}
-          onLoad={handleLoad}
-          allowFullScreen
-        ></iframe>
-        <iframe
-          className="hidden h-[108vh] w-full sm:block xl:hidden"
-          src={iframeSrcMed}
-          onLoad={handleLoad}
-          allowFullScreen
-        ></iframe>
-      </section>
     </>
   );
 }

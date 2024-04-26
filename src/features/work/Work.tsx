@@ -2,20 +2,33 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { WorkData } from '@/data';
 
 export const Work = () => {
   const router = useRouter();
+  const [workRouting, setWorkRouting] = useState('');
 
   const [percentage, setPercentage] = useState(0);
 
-  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1440 && window.innerWidth > 640) {
+        setWorkRouting("workurlmed")
+      } else if (window.innerWidth <= 640) {
+        setWorkRouting("workurlmob")
+      } else {
+        setWorkRouting("workurl")
+      }
+    };
 
-  const handleRoute = (workurl: string): void => {
-    console.log(workurl)
-    if (workurl) router.push(`/work/${workurl}`);
-  };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const cardSlide = useRef<HTMLDivElement>(null);
 
@@ -40,7 +53,16 @@ export const Work = () => {
       key={items.id}
       id="works"
       className="flex flex-col items-center gap-[1rem] transition-all duration-200 ease-in-out hover:scale-105"
-      onClick={() => {if(items.workurl !="Coming Soon") handleRoute(String(items.id))}}
+      onClick={() => {
+        if(items.workurl !="Coming Soon"){
+            if(workRouting == 'workurl'){
+              router.push(`${items.workurl}`)
+            } else if (workRouting == 'workurlmob'){
+              router.push(`${items.workurlmob}`)
+            } else if (workRouting == 'workurlmed'){
+              router.push(`${items.workurlmed}`)
+          }
+        }}}
     >
       <div className="relative group h-[320px] w-[270px] border-2 border-purple-900/30 object-center xl:h-[400px] xl:w-[352px]">
       <div className={`${items.workurl=="Coming Soon"? `hidden group-hover:flex items-center z-10 w-full h-full absolute bg-neutral-950/80 text-neutral-50 text-xl justify-center` : `hidden`}`}>
